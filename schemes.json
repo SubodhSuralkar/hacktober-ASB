@@ -1,0 +1,59 @@
+[
+  {
+    "id": "central_sector_scholarship",
+    "name": "Central Sector Scholarship (via National Scholarship Portal)",
+    "benefit": "College scholarship for eligible students - check the current amount on the official portal.",
+    "deadline": "Set every year on the portal - check the current deadline before applying.",
+    "notes": "A Class 12 merit cut-off also applies - confirm the exact rule on the official portal.",
+    "documents": [
+      "Aadhaar card",
+      "Class 12 marksheet",
+      "Bank passbook with IFSC (Aadhaar-seeded)",
+      "Income certificate (current financial year)",
+      "Bonafide certificate from your college"
+    ],
+    "rules": [
+      {"field": "occupation", "op": "==", "value": "student", "label": "You are a student"},
+      {"field": "annual_family_income", "op": "<=", "value": 450000, "label": "Family income at most Rs 4.5 lakh per year"}
+    ],
+    "source_url": "https://scholarships.gov.in",
+    "verified": false
+  },
+  {
+    "id": "pm_kisan",
+    "name": "PM-KISAN (income support for farmer families)",
+    "benefit": "Income support for eligible farmer families - check the current amount and installments on the official portal.",
+    "deadline": "Registration is open through the year - check the portal.",
+    "notes": "Some categories of landholders are excluded - confirm the exclusion list on the official portal.",
+    "documents": [
+      "Aadhaar card",
+      "Land record (7/12 in Maharashtra)",
+      "Bank passbook with IFSC (Aadhaar-seeded)"
+    ],
+    "rules": [
+      {"field": "occupation", "op": "==", "value": "farmer", "label": "You are a farmer"},
+      {"field": "owns_agri_land", "op": "==", "value": true, "label": "Your family owns agricultural land"}
+    ],
+    "source_url": "https://pmkisan.gov.in",
+    "verified": false
+  },
+  {
+    "id": "pmfby",
+    "name": "PMFBY crop insurance (Pradhan Mantri Fasal Bima Yojana)",
+    "benefit": "Insurance cover for notified crops against listed risks.",
+    "deadline": "Localized losses (hailstorm, landslide, inundation, cloudburst, lightning fire): report within 72 hours via the Crop Insurance app, the 14447 helpline, your bank or the agriculture office. Enrolment cut-off dates are set per season - check the portal.",
+    "notes": "The crop you sow must match the crop you insured, or the claim can be rejected.",
+    "documents": [
+      "Aadhaar card",
+      "Land record (7/12 in Maharashtra) or tenancy proof",
+      "Bank passbook with IFSC",
+      "Crop sowing details"
+    ],
+    "rules": [
+      {"field": "occupation", "op": "==", "value": "farmer", "label": "You are a farmer"},
+      {"field": "owns_agri_land", "op": "==", "value": true, "label": "Your family owns agricultural land"}
+    ],
+    "source_url": "https://pmfby.gov.in",
+    "verified": false
+  }
+]
